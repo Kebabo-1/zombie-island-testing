@@ -3,7 +3,7 @@ const CACHE_NAME = 'my-game-cache-v1'; // bump the number whenever you update as
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(['./']))
+caches.open(CACHE_NAME).then((cache) => cache.addAll(['./', './index.html']))
     // '.' as a placeholder — see note below about listing files
   );
 });
